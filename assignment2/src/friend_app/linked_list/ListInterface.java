@@ -1,6 +1,4 @@
-package linked_list;
-
-import java.util.List;
+package friend_app.linked_list;
 
 /**
  * Interface for LinkedList. This Interface extends List Interface ( Polymorphism )

@@ -1,6 +1,6 @@
-package friend;
-import linked_list.LinkedList;
-import linked_list.ListInterface;
+package friend_app.friend;
+import friend_app.linked_list.LinkedList;
+import friend_app.linked_list.ListInterface;
 
 /**
  * Class FriendList: A Class for storing, removing and sorting friends

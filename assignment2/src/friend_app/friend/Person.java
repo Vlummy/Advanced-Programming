@@ -1,4 +1,4 @@
-package friend;
+package friend_app.friend;
 
 /**
  * Class Person: Represents a human person

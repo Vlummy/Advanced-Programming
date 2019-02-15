@@ -1,4 +1,4 @@
-package linked_list;
+package friend_app.linked_list;
 
 /**
  * Class LinkedList. Used for storing collections of items of the same type
