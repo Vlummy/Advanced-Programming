@@ -15,6 +15,13 @@ class LinkedListTest {
 
     @Test
     void remove() {
+        LinkedList<Integer> linkedList = new LinkedList<>();
+        linkedList.add(1);
+        linkedList.add(2);
+        linkedList.add(3);
+        linkedList.add(4);
+        linkedList.remove(2);
+        assertEquals(3, linkedList.getLength()); // New linkedlist should only contain 2, 3, 4
     }
 
     @Test

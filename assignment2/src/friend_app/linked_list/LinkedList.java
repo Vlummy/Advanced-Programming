@@ -25,18 +25,23 @@ public final class LinkedList<T> implements ListInterface<T> {
 
     @Override
     public void add(T newItem) {
-        // Create a new node
-        // Add newItem to the newly created node
-        // Add the initial node as the new nodes reference
-        Node node = new Node(newItem, this.firstNode);
-        this.firstNode = node;
-        // Increment numberOfEntries
-        numberOfEntries++;
+        numberOfEntries++; // Increment numberOfEntries
+        Node node = new Node(newItem, this.firstNode, numberOfEntries); // Create a new node and pointer
+        this.firstNode = node; // Set firstNode to new node
     }
 
     @Override
     public T remove(int position) {
-        return null;
+        if(position < 1 || position > getLength()) throw new IndexOutOfBoundsException();
+        T data = null;
+        Node currentNode = firstNode;
+        for(int i = getLength(); i > position + 1; i--) {
+            currentNode = currentNode.next;
+        }
+        data = (T) currentNode.next;
+        currentNode.next = currentNode.next.next;
+        numberOfEntries--;
+        return data;
     }
 
     @Override
