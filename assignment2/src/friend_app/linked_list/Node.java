@@ -8,22 +8,15 @@ package friend_app.linked_list;
 public class Node<T> {
     protected T dataItem; // The entry in a list
     protected Node next; // Links to the next node who contains another data and possible next node
-
-    /**
-     * Constructor for node class. Set's the dataItem to dataItem parameter and next node to null
-     * @param dataItem the item to which the Node should hold
-     */
-    protected Node(T dataItem) {
-        this.dataItem = dataItem;
-        this.next = null;
-    }
+    protected int position;
 
     /**
      * Constructor for node class. Set's the dataItem to dataItem parameter
      * @param dataItem the item to which the Node should hold
      */
-    protected Node(T dataItem, Node next) {
+    protected Node(T dataItem, Node next, int position) {
         this.dataItem = dataItem;
         this.next = next;
+        this.position = position;
     }
 }
