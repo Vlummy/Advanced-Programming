@@ -6,4 +6,9 @@ package friend_app.friend;
  * Version: 1.0
  */
 public class Friend extends Person {
+    private FriendList friends = new FriendList();
+
+    public Friend(String firstName, String lastName, Integer birthYear, Integer birthMonth, Integer birthDay, char gender) {
+        super(firstName, lastName, birthYear, birthMonth, birthDay, gender);
+    }
 }
