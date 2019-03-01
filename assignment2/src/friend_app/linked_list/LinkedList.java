@@ -13,6 +13,7 @@ public final class LinkedList<T> implements ListInterface<T> {
 
     // Fields for this class
     private Node<T> firstNode;
+    private Node<T> lastNode; // the tail of the chain
     private int numberOfEntries; // Holds the amount of entries (nodes) in the linked list
 
     /**
@@ -20,14 +21,22 @@ public final class LinkedList<T> implements ListInterface<T> {
      */
     public LinkedList() {
         firstNode = null;
+        lastNode = null;
         numberOfEntries = 0;
     }
 
     @Override
     public void add(T newItem) {
-        numberOfEntries++; // Increment numberOfEntries
-        Node node = new Node(newItem, this.firstNode, numberOfEntries); // Create a new node and pointer
-        this.firstNode = node; // Set firstNode to new node
+        if(firstNode == null) {
+            Node<T> firstNode = new Node<>(newItem, lastNode);
+            this.firstNode = firstNode;
+            this.lastNode = firstNode;
+        } else {
+            Node<T> nextNode = new Node<>(newItem, null);
+            lastNode.next = nextNode;
+            lastNode = nextNode;
+        }
+        numberOfEntries++;
     }
 
     @Override
@@ -35,7 +44,7 @@ public final class LinkedList<T> implements ListInterface<T> {
         if(position < 1 || position > getLength()) throw new IndexOutOfBoundsException();
         T data = null;
         Node currentNode = firstNode;
-        for(int i = getLength(); i > position + 1; i--) {
+        for(int i = 1; i < position - 1; i++) {
             currentNode = currentNode.next;
         }
         data = (T) currentNode.next;

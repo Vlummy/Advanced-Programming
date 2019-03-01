@@ -1,3 +1,5 @@
+package test;
+
 import friend_app.linked_list.LinkedList;
 import org.junit.jupiter.api.Test;
 
