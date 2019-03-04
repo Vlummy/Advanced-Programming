@@ -1,5 +1,6 @@
 package friend_app.linked_list;
 
+import java.util.Iterator;
 import java.util.ListIterator;
 
 /**
@@ -8,7 +9,7 @@ import java.util.ListIterator;
  * Version 1.0
  * @param <T>
  */
-public interface ListInterface<T> extends Iterable<T> {
+public interface ListInterface<T> {
     /**
      * Adds a new item to the list
      * @param newItem The item to be added
@@ -16,12 +17,18 @@ public interface ListInterface<T> extends Iterable<T> {
     void add(T newItem);
 
     /**
-     * Remove an item at the given position
+     * Remove an item at the given index position
      * @param position
      * @return A refrence to the removed entry
      * @throws IndexOutOfBoundsException
      */
     T remove(int position);
+
+    /**
+     * Remove an entry by comparison
+     * @return The removed item
+     */
+    T remove(T item);
 
     /**
      * Removes all entries from this list.
@@ -46,7 +53,7 @@ public interface ListInterface<T> extends Iterable<T> {
      * Used for getting an Iterator Interface so that a list can be iterated
      * @return ListIterator Interface for iterating over a list
      */
-    ListIterator<T> getIterator();
+    Iterator<T> getIterator();
 
     /**
      * Sorts a list

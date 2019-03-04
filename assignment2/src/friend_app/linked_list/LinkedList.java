@@ -1,7 +1,5 @@
 package friend_app.linked_list;
-
 import java.util.Iterator;
-import java.util.ListIterator;
 
 /**
  * Class LinkedList. Used for storing collections of items of the same type
@@ -54,8 +52,32 @@ public final class LinkedList<T> implements ListInterface<T> {
     }
 
     @Override
-    public void clear() {
+    public T remove(T entry) {
+        T data = null;
+        if(firstNode.dataItem == entry) {
+            data = firstNode.dataItem;
+            firstNode = firstNode.next;
+            numberOfEntries--;
+        } else {
+            Node currentNode = firstNode;
+            for(int i = 1; i < numberOfEntries; i++) {
+                if(currentNode.next.dataItem == entry) {
+                    data = (T) currentNode.next.dataItem;
+                    currentNode.next = currentNode.next.next;
+                    numberOfEntries--;
+                } else {
+                    currentNode = currentNode.next;
+                }
+            }
+        }
+        return data;
+    }
 
+    @Override
+    public void clear() {
+        firstNode = null;
+        lastNode = null;
+        numberOfEntries = 0;
     }
 
     @Override
@@ -65,21 +87,33 @@ public final class LinkedList<T> implements ListInterface<T> {
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return numberOfEntries == 0;
     }
 
     @Override
-    public ListIterator<T> getIterator() {
-        return null;
+    public Iterator<T> getIterator() {
+        return new Iterator<T>() {
+            private Node currentNode = firstNode;
+
+            @Override
+            public boolean hasNext() {
+                return currentNode != null;
+            }
+
+            @Override
+            public T next() {
+                if (hasNext()) {
+                    Node returnNode = currentNode;
+                    currentNode = currentNode.next;
+                    return (T) returnNode.dataItem;
+                }
+                return null;
+            }
+        };
     }
 
     @Override
     public void sort() {
 
-    }
-
-    @Override
-    public Iterator<T> iterator() {
-        return null;
     }
 }

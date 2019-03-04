@@ -89,7 +89,14 @@ public class Person {
      */
     public void setBirth(Integer birthYear, Integer birthMonth, Integer birthDay) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        String date = birthYear + "-0" + birthMonth + "-0" + birthDay;
+        String date = "";
+        if(birthMonth < 10 && birthDay < 10) {
+            date = birthYear + "-0" + birthMonth + "-0" + birthDay;
+        } else if (birthMonth < 10) {
+            date = birthYear + "-0" + birthMonth + "-" + birthDay;
+        } else if(birthDay < 10) {
+            date = birthYear + "-" + birthMonth + "-0" + birthDay;
+        }
         LocalDate birth = LocalDate.parse(date, formatter);
         this.birth = birth;
     }
