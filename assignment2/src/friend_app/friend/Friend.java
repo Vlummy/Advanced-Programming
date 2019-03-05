@@ -9,14 +9,17 @@ import friend_app.linked_list.ListInterface;
  * Version: 1.0
  */
 public class Friend extends Person {
-    private ListInterface<Person> friends;
+    private FriendList<Person> friends;
 
     public Friend(String firstName, String lastName, Integer birthYear, Integer birthMonth, Integer birthDay, char gender) {
         super(firstName, lastName, birthYear, birthMonth, birthDay, gender);
-        this.friends = new LinkedList<>();
     }
 
-    public ListInterface getFriendsList() {
+    public FriendList<Person> getFriendsList() {
         return friends;
+    }
+
+    public void setFriendsList(FriendList friendsList) {
+        friends = friendsList;
     }
 }

@@ -7,7 +7,7 @@ import java.util.Iterator;
  * Version: 1.0
  * @param <T>
  */
-public final class LinkedList<T> implements ListInterface<T> {
+public class LinkedList<T> implements ListInterface<T> {
 
     // Fields for this class
     private Node<T> firstNode;
@@ -110,10 +110,5 @@ public final class LinkedList<T> implements ListInterface<T> {
                 return null;
             }
         };
-    }
-
-    @Override
-    public void sort() {
-
     }
 }

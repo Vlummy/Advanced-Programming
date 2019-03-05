@@ -1,7 +1,9 @@
 package friend_app;
 
 import friend_app.friend.Friend;
+import friend_app.friend.FriendList;
 import friend_app.friend.Person;
+import friend_app.linked_list.ListInterface;
 
 import java.util.Iterator;
 
@@ -13,6 +15,9 @@ public class Main {
         Friend person4 = new Friend("Per", "Sandberg", 1900, 5, 25, 'M');
         Friend person5 = new Friend("Tormod", "Lerøy", 1854, 5, 2, 'M');
 
+        FriendList friendList = new FriendList();
+        person2.setFriendsList(friendList);
+
         person2.getFriendsList().add(person1);
         person2.getFriendsList().add(person3);
         person2.getFriendsList().add(person4);
@@ -20,7 +25,7 @@ public class Main {
 
         System.out.println(person2.getFirstName() + " " + person2.getLastName() + " has " + person2.getFriendsList().getLength() + " friends.");
 
-        Friend removedPerson = (Friend) person2.getFriendsList().remove(person4);
+        Person removedPerson = person2.getFriendsList().remove(person4);
         System.out.println(" -" + removedPerson.getFirstName() + " " + removedPerson.getLastName() + " has been removed from the list");
         System.out.println("Now " + person2.getFirstName() + " " + person2.getLastName() + " only have " + person2.getFriendsList().getLength() + " friends left.");
         System.out.println(" ");
@@ -48,6 +53,8 @@ public class Main {
         }
         System.out.println(" ");
         System.out.println(person6.getLastName() + ": 'Grand! ... (small pause) ... Engade!'");
+
+        person2.getFriendsList().sort();
 
     }
 }

@@ -55,10 +55,5 @@ public interface ListInterface<T> {
      */
     Iterator<T> getIterator();
 
-    /**
-     * Sorts a list
-     */
-    void sort();
-
 
 }
