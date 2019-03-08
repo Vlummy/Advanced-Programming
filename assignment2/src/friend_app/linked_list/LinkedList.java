@@ -39,19 +39,18 @@ public class LinkedList<T> implements ListInterface<T> {
 
     @Override
     public T get(int position) {
-        if(position < 0 || position > getLength()) throw new IndexOutOfBoundsException();
+        if(position < 1 || position > getLength()) throw new IndexOutOfBoundsException();
         T data;
         Node currentNode = firstNode;
 
-        for(int i = 0; i < position - 1; i++) {
-            currentNode = currentNode.next;
+        if(position == 1) {
+            firstNode = firstNode.next;
+            return (T) currentNode.dataItem;
+        } else {
+            for(int i = 1; i < position - 1; i++) {
+                currentNode = currentNode.next;
+            }
         }
-
-        if (position == numberOfEntries){
-            data = (T) currentNode.dataItem;
-            return data;
-        }
-
         data = (T) currentNode.next.dataItem;
         return data;
     }
@@ -76,24 +75,27 @@ public class LinkedList<T> implements ListInterface<T> {
 
     @Override
     public T remove(int position) {
-        if(position < 0 || position > getLength()) throw new IndexOutOfBoundsException();
+        if(position < 1 || position > getLength()) throw new IndexOutOfBoundsException();
         T data;
         Node currentNode = firstNode;
-        for(int i = 0; i < position - 1; i++) {
-            currentNode = currentNode.next;
-        }
-<<<<<<< Updated upstream
 
-        if (position == numberOfEntries){
-            data = (T) currentNode.dataItem;
-            numberOfEntries--;
-            return data;
+        if(position == 1) {
+            firstNode = firstNode.next;
+            return (T) currentNode.dataItem;
+        } else {
+            for(int i = 1; i < position - 1; i++) {
+                currentNode = currentNode.next;
+            }
         }
 
-=======
->>>>>>> Stashed changes
+
         data = (T) currentNode.next.dataItem;
         currentNode.next = currentNode.next.next;
+
+        if(position == numberOfEntries) {
+            lastNode = currentNode;
+        }
+
         numberOfEntries--;
         return data;
     }
@@ -107,10 +109,13 @@ public class LinkedList<T> implements ListInterface<T> {
             numberOfEntries--;
         } else {
             Node currentNode = firstNode;
-            for(int i = 0; i < numberOfEntries; i++) {
+            for(int i = 1; i < numberOfEntries; i++) {
                 if(currentNode.next.dataItem == entry) {
                     data = (T) currentNode.next.dataItem;
                     currentNode.next = currentNode.next.next;
+                    if((i + 1) == numberOfEntries) {
+                        lastNode = currentNode;
+                    }
                     numberOfEntries--;
                 } else {
                     currentNode = currentNode.next;

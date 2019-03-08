@@ -23,7 +23,7 @@ public class Main {
 
         System.out.println(person2.getFirstName() + " " + person2.getLastName() + " has " + person2.getFriendsList().getLength() + " friends.");
 
-        Person removedPerson = person2.getFriendsList().remove(1);
+        Person removedPerson = person2.getFriendsList().remove(person5);
 
         System.out.println(" -" + removedPerson.getFirstName() + " " + removedPerson.getLastName() + " has been removed from the list");
         System.out.println("Now " + person2.getFirstName() + " " + person2.getLastName() + " only have " + person2.getFriendsList().getLength() + " friends left.");

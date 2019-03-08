@@ -12,7 +12,7 @@ public class FriendList extends LinkedList<Friend> implements SorterInterface {
 
         if (length > 0){
             //Pivot Selection
-            Friend firstCandidate = this.get(0);
+            Friend firstCandidate = this.get(1);
             Friend midCandidate = this.get(length/2);
             Friend lastCandidate = this.get(length);
             int firstToMid = firstCandidate.getLastName().compareToIgnoreCase(midCandidate.getLastName());
