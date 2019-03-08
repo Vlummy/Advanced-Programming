@@ -82,6 +82,7 @@ public class LinkedList<T> implements ListInterface<T> {
         for(int i = 0; i < position - 1; i++) {
             currentNode = currentNode.next;
         }
+<<<<<<< Updated upstream
 
         if (position == numberOfEntries){
             data = (T) currentNode.dataItem;
@@ -89,6 +90,8 @@ public class LinkedList<T> implements ListInterface<T> {
             return data;
         }
 
+=======
+>>>>>>> Stashed changes
         data = (T) currentNode.next.dataItem;
         currentNode.next = currentNode.next.next;
         numberOfEntries--;
