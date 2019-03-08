@@ -2,7 +2,7 @@ package friend_app.linked_list;
 
 /**
  * Node class for a LinkedList. This class can reference a new Node and hold a dataItem of any type.
- * Author: Øyvind Johannessen, Roy H. Jensen
+ * Author: Øyvind Johannessen, Roy H. Jenssen
  * Version: 1.0
  */
 public class Node<T> {
@@ -16,5 +16,9 @@ public class Node<T> {
     protected Node(T dataItem, Node next) {
         this.dataItem = dataItem;
         this.next = next;
+    }
+
+    public T getDataItem() {
+        return dataItem;
     }
 }

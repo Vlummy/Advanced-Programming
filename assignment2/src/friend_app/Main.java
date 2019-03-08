@@ -3,13 +3,12 @@ package friend_app;
 import friend_app.friend.Friend;
 import friend_app.friend.FriendList;
 import friend_app.friend.Person;
-import friend_app.linked_list.ListInterface;
 
 import java.util.Iterator;
 
 public class Main {
     public static void main(String[] args) {
-        Friend person1 = new Friend("Roy", "Jensen", 1988, 6, 12, 'M');
+        Friend person1 = new Friend("Roy", "Jenssen", 1988, 6, 12, 'M');
         Friend person2 = new Friend("Øyvind", "Johannessen", 1989, 4, 7, 'M'); // The main person
         Friend person3 = new Friend("Ida", "Kvamme", 1991, 9, 20, 'F');
         Friend person4 = new Friend("Per", "Sandberg", 1900, 5, 25, 'M');

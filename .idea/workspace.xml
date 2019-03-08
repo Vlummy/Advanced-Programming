@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="423faa26-d32c-4bce-9a3e-88d7a27ca109" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assignment2/src/friend_app/friend/FriendList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assignment2/src/friend_app/sorter/SorterInterface.java" afterDir="false" />
+    <list default="true" id="423faa26-d32c-4bce-9a3e-88d7a27ca109" name="Default Changelist" comment="- Tweaked author name across all files&#10;- Started working on the pivot selection for the quiksort algorithm in FriendList (Not done)&#10;- Added a get method to LinkedList&#10;- Fixed position parameter get and remove methods to not throw unneccessary OutOfBounds exceptions&#10;- Added getDataItem to Node (Can safely be removed again)&#10;- Added description for the get methods in ListInterface">
+      <change beforePath="$PROJECT_DIR$/.idea/Advanced-Programming.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Advanced-Programming.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment2/src/friend_app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/friend_app/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment2/src/friend_app/friend/Friend.java" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/friend_app/friend/Friend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment2/src/friend_app/friend/FriendList.java" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/friend_app/friend/FriendList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment2/src/friend_app/friend/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/friend_app/friend/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment2/src/friend_app/linked_list/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/friend_app/linked_list/LinkedList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment2/src/friend_app/linked_list/ListInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/friend_app/linked_list/ListInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/test/LinkedListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/test/LinkedListTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment2/src/friend_app/linked_list/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/friend_app/linked_list/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment2/src/friend_app/sorter/SorterInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/friend_app/sorter/SorterInterface.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,31 +19,16 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assignment2/src/friend_app/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="27" column="72" selection-start-line="27" selection-start-column="72" selection-end-line="27" selection-end-column="72" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assignment2/src/friend_app/linked_list/LinkedList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1284">
-              <caret line="105" column="35" selection-start-line="105" selection-start-column="25" selection-end-line="105" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assignment2/src/friend_app/friend/FriendList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+            <state relative-caret-position="714">
+              <caret line="42" column="95" selection-start-line="42" selection-start-column="94" selection-end-line="42" selection-end-column="95" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -50,13 +37,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assignment2/src/friend_app/friend/Friend.java">
+        <entry file="file://$PROJECT_DIR$/assignment2/src/test/LinkedListTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+            <state relative-caret-position="-482">
+              <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assignment2/src/friend_app/linked_list/Node.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
               <folding>
-                <element signature="e#694#695#0" expanded="true" />
-                <element signature="e#730#731#0" expanded="true" />
+                <element signature="e#669#670#0" expanded="true" />
+                <element signature="e#700#701#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -65,17 +61,33 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assignment2/src/friend_app/sorter/SorterInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+            <state relative-caret-position="187">
+              <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assignment2/src/friend_app/linked_list/Node.java">
+        <entry file="file://$PROJECT_DIR$/assignment2/src/friend_app/friend/FriendList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="366">
+              <caret line="25" column="44" lean-forward="true" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assignment2/src/friend_app/linked_list/LinkedList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="334">
+              <caret line="31" column="16" lean-forward="true" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+              <folding>
+                <element signature="e#2755#2756#0" expanded="true" />
+                <element signature="e#2813#2814#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -83,8 +95,41 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assignment2/src/friend_app/linked_list/ListInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="55" column="30" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+            <state relative-caret-position="510">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assignment2/src/friend_app/friend/Person.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3">
+              <caret line="34" column="50" lean-forward="true" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
+              <folding>
+                <element signature="docComment;class#Person#0" />
+                <element signature="docComment;method#Person#0;class#Person#0" />
+                <element signature="docComment;method#Person#1;class#Person#0" />
+                <element signature="docComment;method#getFirstName#0;class#Person#0" />
+                <element signature="e#1208#1209#0" expanded="true" />
+                <element signature="e#1240#1241#0" expanded="true" />
+                <element signature="docComment;method#setFirstName#0;class#Person#0" />
+                <element signature="docComment;method#getLastName#0;class#Person#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assignment2/src/friend_app/friend/Friend.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+              <folding>
+                <element signature="docComment;class#Friend#0" />
+                <element signature="e#692#693#0" expanded="true" />
+                <element signature="e#729#730#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -105,14 +150,15 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/assignment2/src/friend_app/linked_list/Node.java" />
-        <option value="$PROJECT_DIR$/assignment2/src/friend_app/sorter/SorterInterface.java" />
-        <option value="$PROJECT_DIR$/assignment2/src/friend_app/linked_list/LinkedList.java" />
         <option value="$PROJECT_DIR$/assignment2/src/test/LinkedListTest.java" />
+        <option value="$PROJECT_DIR$/assignment2/src/friend_app/friend/Person.java" />
+        <option value="$PROJECT_DIR$/assignment2/src/friend_app/Main.java" />
+        <option value="$PROJECT_DIR$/assignment2/src/friend_app/sorter/SorterInterface.java" />
         <option value="$PROJECT_DIR$/assignment2/src/friend_app/linked_list/ListInterface.java" />
         <option value="$PROJECT_DIR$/assignment2/src/friend_app/friend/Friend.java" />
+        <option value="$PROJECT_DIR$/assignment2/src/friend_app/linked_list/Node.java" />
         <option value="$PROJECT_DIR$/assignment2/src/friend_app/friend/FriendList.java" />
-        <option value="$PROJECT_DIR$/assignment2/src/friend_app/Main.java" />
+        <option value="$PROJECT_DIR$/assignment2/src/friend_app/linked_list/LinkedList.java" />
       </list>
     </option>
   </component>
@@ -121,61 +167,73 @@
     <option name="width" value="1346" />
     <option name="height" value="700" />
   </component>
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Advanced-Programming2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Advanced-Programming2" type="462c0819:PsiDirectoryNode" />
+              <item name="git" type="b2602c69:ProjectViewProjectNode" />
+              <item name="git" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Advanced-Programming2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Advanced-Programming2" type="462c0819:PsiDirectoryNode" />
+              <item name="git" type="b2602c69:ProjectViewProjectNode" />
+              <item name="git" type="462c0819:PsiDirectoryNode" />
               <item name="assignment2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Advanced-Programming2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Advanced-Programming2" type="462c0819:PsiDirectoryNode" />
+              <item name="git" type="b2602c69:ProjectViewProjectNode" />
+              <item name="git" type="462c0819:PsiDirectoryNode" />
               <item name="assignment2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Advanced-Programming2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Advanced-Programming2" type="462c0819:PsiDirectoryNode" />
+              <item name="git" type="b2602c69:ProjectViewProjectNode" />
+              <item name="git" type="462c0819:PsiDirectoryNode" />
               <item name="assignment2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="friend_app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Advanced-Programming2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Advanced-Programming2" type="462c0819:PsiDirectoryNode" />
+              <item name="git" type="b2602c69:ProjectViewProjectNode" />
+              <item name="git" type="462c0819:PsiDirectoryNode" />
               <item name="assignment2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="friend_app" type="462c0819:PsiDirectoryNode" />
               <item name="friend" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Advanced-Programming2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Advanced-Programming2" type="462c0819:PsiDirectoryNode" />
+              <item name="git" type="b2602c69:ProjectViewProjectNode" />
+              <item name="git" type="462c0819:PsiDirectoryNode" />
               <item name="assignment2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="friend_app" type="462c0819:PsiDirectoryNode" />
               <item name="linked_list" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="git" type="b2602c69:ProjectViewProjectNode" />
+              <item name="git" type="462c0819:PsiDirectoryNode" />
+              <item name="assignment2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="friend_app" type="462c0819:PsiDirectoryNode" />
+              <item name="sorter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="git" type="b2602c69:ProjectViewProjectNode" />
+              <item name="git" type="462c0819:PsiDirectoryNode" />
+              <item name="assignment2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -185,7 +243,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551796751198" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552024345237" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -312,10 +370,40 @@
     <option name="totallyTimeSpent" value="10085000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2" y="0" width="1370" height="742" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2530303" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17270789" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.25460455" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.48863637" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.42361864" />
+      <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.32936078" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Maven" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17270789" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -344,62 +432,81 @@
       <window_info anchor="right" id="Maven" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="- Tweaked author name across all files&#10;- Started working on the pivot selection for the quiksort algorithm in FriendList (Not done)&#10;- Added a get method to LinkedList&#10;- Fixed position parameter get and remove methods to not throw unneccessary OutOfBounds exceptions&#10;- Added getDataItem to Node (Can safely be removed again)&#10;- Added description for the get methods in ListInterface" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Tweaked author name across all files&#10;- Started working on the pivot selection for the quiksort algorithm in FriendList (Not done)&#10;- Added a get method to LinkedList&#10;- Fixed position parameter get and remove methods to not throw unneccessary OutOfBounds exceptions&#10;- Added getDataItem to Node (Can safely be removed again)&#10;- Added description for the get methods in ListInterface" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/assignment2/src/test/LinkedListTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
+        <state relative-caret-position="-482">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assignment2/src/friend_app/friend/Friend.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+        <state relative-caret-position="272">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
           <folding>
-            <element signature="e#694#695#0" expanded="true" />
-            <element signature="e#730#731#0" expanded="true" />
+            <element signature="docComment;class#Friend#0" />
+            <element signature="e#692#693#0" expanded="true" />
+            <element signature="e#729#730#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assignment2/src/friend_app/linked_list/LinkedList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1284">
-          <caret line="105" column="35" selection-start-line="105" selection-start-column="25" selection-end-line="105" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assignment2/src/friend_app/sorter/SorterInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assignment2/src/friend_app/linked_list/ListInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="55" column="30" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
+        <state relative-caret-position="510">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment2/src/friend_app/friend/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3">
+          <caret line="34" column="50" lean-forward="true" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
+          <folding>
+            <element signature="docComment;class#Person#0" />
+            <element signature="docComment;method#Person#0;class#Person#0" />
+            <element signature="docComment;method#Person#1;class#Person#0" />
+            <element signature="docComment;method#getFirstName#0;class#Person#0" />
+            <element signature="e#1208#1209#0" expanded="true" />
+            <element signature="e#1240#1241#0" expanded="true" />
+            <element signature="docComment;method#setFirstName#0;class#Person#0" />
+            <element signature="docComment;method#getLastName#0;class#Person#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assignment2/src/friend_app/linked_list/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="306">
+          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding>
+            <element signature="e#669#670#0" expanded="true" />
+            <element signature="e#700#701#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment2/src/friend_app/sorter/SorterInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assignment2/src/friend_app/friend/FriendList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+        <state relative-caret-position="366">
+          <caret line="25" column="44" lean-forward="true" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -408,8 +515,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assignment2/src/friend_app/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="27" column="72" selection-start-line="27" selection-start-column="72" selection-end-line="27" selection-end-column="72" />
+        <state relative-caret-position="714">
+          <caret line="42" column="95" selection-start-line="42" selection-start-column="94" selection-end-line="42" selection-end-column="95" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment2/src/friend_app/linked_list/LinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="31" column="16" lean-forward="true" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+          <folding>
+            <element signature="e#2755#2756#0" expanded="true" />
+            <element signature="e#2813#2814#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -470,7 +591,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

@@ -1,11 +1,10 @@
 package friend_app.linked_list;
 
 import java.util.Iterator;
-import java.util.ListIterator;
 
 /**
  * Interface for LinkedList. This Interface extends List Interface ( Polymorphism )
- * Author: Roy H. Jensen, Øyvind Johannessen
+ * Author: Roy H. Jenssen, Øyvind Johannessen
  * Version 1.0
  * @param <T>
  */
@@ -15,6 +14,21 @@ public interface ListInterface<T> {
      * @param newItem The item to be added
      */
     void add(T newItem);
+
+    /**
+     * Get an item at given index position without removing it.
+     * @param position
+     * @return A reference to the removed entry
+     * @throws IndexOutOfBoundsException
+     */
+    T get(int position);
+
+    /**
+     * Get an item by comparison.
+     * @return The item
+     */
+    T get(T item);
+
 
     /**
      * Remove an item at the given index position

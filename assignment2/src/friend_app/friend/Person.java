@@ -3,14 +3,10 @@ package friend_app.friend;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.concurrent.TimeUnit;
 
 /**
  * Class Person: Represents a human person
- * Author: Roy H. Jensen, Øyvind Johannessen
+ * Author: Roy H. Jenssen, Øyvind Johannessen
  * Version: 1.0
  */
 public class Person {
