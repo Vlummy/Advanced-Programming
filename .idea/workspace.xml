@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="423faa26-d32c-4bce-9a3e-88d7a27ca109" name="Default Changelist" comment="- Tweaked author name across all files&#10;- Started working on the pivot selection for the quiksort algorithm in FriendList (Not done)&#10;- Added a get method to LinkedList&#10;- Fixed position parameter get and remove methods to not throw unneccessary OutOfBounds exceptions&#10;- Added getDataItem to Node (Can safely be removed again)&#10;- Added description for the get methods in ListInterface">
-      <change beforePath="$PROJECT_DIR$/.idea/Advanced-Programming.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Advanced-Programming.iml" afterDir="false" />
+    <list default="true" id="423faa26-d32c-4bce-9a3e-88d7a27ca109" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/friend_app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/friend_app/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/friend_app/friend/Friend.java" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/friend_app/friend/Friend.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/friend_app/friend/FriendList.java" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/friend_app/friend/FriendList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/friend_app/friend/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/friend_app/friend/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/friend_app/linked_list/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/friend_app/linked_list/LinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/friend_app/linked_list/ListInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/friend_app/linked_list/ListInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/friend_app/linked_list/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/friend_app/linked_list/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/friend_app/sorter/SorterInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/friend_app/sorter/SorterInterface.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,8 +73,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assignment2/src/friend_app/linked_list/LinkedList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="31" column="16" lean-forward="true" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+            <state relative-caret-position="130">
+              <caret line="19" column="25" lean-forward="true" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
               <folding>
                 <element signature="e#2755#2756#0" expanded="true" />
                 <element signature="e#2813#2814#0" expanded="true" />
@@ -243,7 +234,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552024345237" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552024896987" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -356,6 +347,14 @@
       <workItem from="1551450432348" duration="80000" />
       <workItem from="1551793146123" duration="3605000" />
     </task>
+    <task id="LOCAL-00001" summary="- Tweaked author name across all files&#10;- Started working on the pivot selection for the quiksort algorithm in FriendList (Not done)&#10;- Added a get method to LinkedList&#10;- Fixed position parameter get and remove methods to not throw unneccessary OutOfBounds exceptions&#10;- Added getDataItem to Node (Can safely be removed again)&#10;- Added description for the get methods in ListInterface">
+      <created>1552024742837</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1552024742838</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -371,6 +370,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17270789" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -525,8 +525,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assignment2/src/friend_app/linked_list/LinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="31" column="16" lean-forward="true" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+        <state relative-caret-position="130">
+          <caret line="19" column="25" lean-forward="true" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
           <folding>
             <element signature="e#2755#2756#0" expanded="true" />
             <element signature="e#2813#2814#0" expanded="true" />
