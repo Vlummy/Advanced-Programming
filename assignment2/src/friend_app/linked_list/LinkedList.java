@@ -1,5 +1,6 @@
 package friend_app.linked_list;
 import java.util.Iterator;
+import java.util.Arrays;
 
 /**
  * Class LinkedList. Used for storing collections of items of the same type
@@ -44,13 +45,13 @@ public class LinkedList<T> implements ListInterface<T> {
         Node currentNode = firstNode;
 
         if(position == 1) {
-            firstNode = firstNode.next;
             return (T) currentNode.dataItem;
         } else {
             for(int i = 1; i < position - 1; i++) {
                 currentNode = currentNode.next;
             }
         }
+
         data = (T) currentNode.next.dataItem;
         return data;
     }
@@ -62,9 +63,11 @@ public class LinkedList<T> implements ListInterface<T> {
             data = firstNode.dataItem;
         } else {
             Node currentNode = firstNode;
-            for(int i = 0; i < numberOfEntries; i++) {
+            for(int i = 1; i < numberOfEntries; i++) {
                 if(currentNode.next.dataItem == entry) {
                     data = (T) currentNode.next.dataItem;
+                    if((i + 1) == numberOfEntries) {
+                    }
                 } else {
                     currentNode = currentNode.next;
                 }
@@ -162,5 +165,27 @@ public class LinkedList<T> implements ListInterface<T> {
                 return null;
             }
         };
+    }
+
+    @Override
+    public T[] toArray() {
+        int length = this.numberOfEntries;
+
+        // This cast is safe. New array contains null entries
+        @SuppressWarnings("unchecked")
+        T[] arr = (T[]) new Object[length];
+        T data;
+
+        Node currentNode = firstNode;
+        arr[0] = firstNode.dataItem;
+        for(int i = 1; i < numberOfEntries; i++) {
+                data = (T) currentNode.next.dataItem;
+                arr[i] = data;
+                currentNode = currentNode.next;
+                if((i + 1) == numberOfEntries) {
+                    return arr;
+            }
+        }
+        return null;
     }
 }

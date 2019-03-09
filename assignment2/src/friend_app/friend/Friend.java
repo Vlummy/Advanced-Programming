@@ -19,4 +19,5 @@ public class Friend extends Person {
     public void setFriendsList(FriendList friendsList) {
         friends = friendsList;
     }
+
 }

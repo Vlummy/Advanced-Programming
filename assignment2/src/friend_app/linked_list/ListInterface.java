@@ -69,5 +69,11 @@ public interface ListInterface<T> {
      */
     Iterator<T> getIterator();
 
+    /**
+     * Used for turning a list into an array.
+     * @return Array of the list the method is used on
+     */
+    T[] toArray();
+
 
 }

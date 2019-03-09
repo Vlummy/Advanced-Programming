@@ -98,6 +98,7 @@ public class Person {
     }
 
     /**
+     *
      * Calculates the age by using this persons birth and returns an Integer representing the age in years
      * If birth is not set before using this method a NullPointerException will be thrown
      * @return age
@@ -124,5 +125,10 @@ public class Person {
      */
     public void setGender(char gender) {
         this.gender = gender;
+    }
+
+    @Override
+    public String toString() {
+        return getLastName();
     }
 }
