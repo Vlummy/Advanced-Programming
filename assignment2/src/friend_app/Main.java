@@ -54,8 +54,8 @@ public class Main {
         Friend person13 = new Friend("Jean Luke", "Picard", 2305, 7, 13, 'M');
         person2.getFriendsList().add(person13);
 
-        System.out.println(person2.getFirstName() + " " + person2.getLastName() + " suddenly found a new friend. This persons name is " + person6.getFirstName() + " " + person6.getLastName() +
-                " and he is from the future, so yee, his age is... " + person6.getAge() + " years young?");
+        System.out.println(person2.getFirstName() + " " + person2.getLastName() + " suddenly found a new friend. This persons name is " + person13.getFirstName() + " " + person13.getLastName() +
+                " and he is from the future, so yee, his age is... " + person13.getAge() + " years young?");
 
         System.out.println(person2.getFirstName() + " now has " + person2.getFriendsList().getLength() + " friends again.");
 
@@ -66,6 +66,17 @@ public class Main {
         }
         System.out.println(" ");
         System.out.println(person6.getLastName() + ": 'Grand! ... (small pause) ... Engade!'");
+        System.out.println(" ");
+
+        FriendList sortedList = person2.getFriendsList().sort();
+
+        System.out.println("Sorted Array:");
+
+        Iterator sortedArrayIter = sortedList.getIterator();
+        while (sortedArrayIter.hasNext()) {
+            Friend friend = (Friend) sortedArrayIter.next();
+            System.out.println(" " + friend.getFirstName() + " " + friend.getLastName());
+        }
 
     }
 }

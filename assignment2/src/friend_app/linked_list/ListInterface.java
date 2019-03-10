@@ -73,7 +73,7 @@ public interface ListInterface<T> {
      * Used for turning a list into an array.
      * @return Array of the list the method is used on
      */
-    T[] toArray();
+    <E> E[] toArray(E[] a);
 
 
 }

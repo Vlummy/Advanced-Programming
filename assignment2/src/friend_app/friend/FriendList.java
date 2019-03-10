@@ -14,21 +14,14 @@ public class FriendList extends LinkedList<Friend> implements SorterInterface {
         }
 
         FriendList sortedList = new FriendList();   //Setting up a list to return
-        Object[] toArrayRetrieval = this.toArray(); //Getting the Object array from LinkedList
-        Friend[] sortingArray = new Friend[toArrayRetrieval.length]; //Setting up a Friend array
-
-
-        for (int i = 0; i < toArrayRetrieval.length; i++){
-            sortingArray[i] = (Friend) toArrayRetrieval[i]; //Casting each object in Object array to Friend
-        }
+        Friend[] sortingArray = new Friend[this.getLength()]; //Create new empty array
+        sortingArray = this.toArray(sortingArray); // Set new array
 
         int length = sortingArray.length;
 
         quickSort(sortingArray, 0, length-1); //Implementing the quicksort algorithm for the list
 
-        System.out.println("Sorted Array:");
         for (int i = 0; i < sortingArray.length; i++){
-            System.out.println(sortingArray[i].getLastName());
             sortedList.add(sortingArray[i]);
         }
 

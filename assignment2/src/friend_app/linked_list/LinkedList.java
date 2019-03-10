@@ -168,7 +168,7 @@ public class LinkedList<T> implements ListInterface<T> {
     }
 
     @Override
-    public T[] toArray() {
+    public <E> E[] toArray(E[] a) {
         int length = this.numberOfEntries;
 
         // This cast is safe. New array contains null entries
@@ -183,7 +183,7 @@ public class LinkedList<T> implements ListInterface<T> {
                 arr[i] = data;
                 currentNode = currentNode.next;
                 if((i + 1) == numberOfEntries) {
-                    return arr;
+                    return (E[]) Arrays.copyOf(arr, length, a.getClass());
             }
         }
         return null;

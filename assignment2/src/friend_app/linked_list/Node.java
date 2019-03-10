@@ -18,6 +18,10 @@ public class Node<T> {
         this.next = next;
     }
 
+    /**
+     * Get the data that this node holds
+     * @return The dataItem
+     */
     public T getDataItem() {
         return dataItem;
     }
