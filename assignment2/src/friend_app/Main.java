@@ -67,7 +67,5 @@ public class Main {
         System.out.println(" ");
         System.out.println(person6.getLastName() + ": 'Grand! ... (small pause) ... Engade!'");
 
-        person2.getFriendsList().sort();
-
     }
 }

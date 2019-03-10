@@ -8,6 +8,11 @@ public class FriendList extends LinkedList<Friend> implements SorterInterface {
 
     @Override
     public FriendList sort() {
+
+        if (this.isEmpty() || this.getLength() == 1){
+            return null;
+        }
+
         FriendList sortedList = new FriendList();   //Setting up a list to return
         Object[] toArrayRetrieval = this.toArray(); //Getting the Object array from LinkedList
         Friend[] sortingArray = new Friend[toArrayRetrieval.length]; //Setting up a Friend array
@@ -111,7 +116,7 @@ public class FriendList extends LinkedList<Friend> implements SorterInterface {
             friends[mid] = lastCandidate;
             friends[last] = midCandidate;
 
-        } else if (midToLast > 0 && firstToLast < 0) {
+        } else if (midToLast < 0 && firstToLast > 0) {
             friends[first] = midCandidate;
             friends[mid] = lastCandidate;
             friends[last] = firstCandidate;

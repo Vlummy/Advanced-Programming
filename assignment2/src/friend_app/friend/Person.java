@@ -92,6 +92,8 @@ public class Person {
             date = birthYear + "-0" + birthMonth + "-" + birthDay;
         } else if(birthDay < 10) {
             date = birthYear + "-" + birthMonth + "-0" + birthDay;
+        } else {
+            date = birthYear + "-" + birthMonth + "-" + birthDay;
         }
         LocalDate birth = LocalDate.parse(date, formatter);
         this.birth = birth;
