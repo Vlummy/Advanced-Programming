@@ -61,12 +61,4 @@ class LinkedListTest {
         LinkedList<Integer> linkedList = new LinkedList<>();
         assertEquals(true, linkedList.isEmpty());
     }
-
-    @Test
-    void sort() {
-    }
-
-    @Test
-    void iterator() {
-    }
 }
