@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="423faa26-d32c-4bce-9a3e-88d7a27ca109" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/friend_app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/friend_app/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/friend_app/friend/Friend.java" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/friend_app/friend/Friend.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/friend_app/friend/FriendList.java" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/friend_app/friend/FriendList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/friend_app/linked_list/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/friend_app/linked_list/LinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/friend_app/linked_list/ListInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/friend_app/linked_list/ListInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment2/src/friend_app/linked_list/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/assignment2/src/friend_app/linked_list/Node.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,7 +11,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assignment2/src/friend_app/linked_list/LinkedList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="180" column="50" selection-start-line="180" selection-start-column="50" selection-end-line="180" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -58,8 +62,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -67,16 +69,44 @@
               <item name="Advanced-Programming2" type="b2602c69:ProjectViewProjectNode" />
               <item name="Advanced-Programming2" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Advanced-Programming2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Advanced-Programming2" type="462c0819:PsiDirectoryNode" />
+              <item name="assignment2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Advanced-Programming2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Advanced-Programming2" type="462c0819:PsiDirectoryNode" />
+              <item name="assignment2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Advanced-Programming2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Advanced-Programming2" type="462c0819:PsiDirectoryNode" />
+              <item name="assignment2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="friend_app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Advanced-Programming2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Advanced-Programming2" type="462c0819:PsiDirectoryNode" />
+              <item name="assignment2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="friend_app" type="462c0819:PsiDirectoryNode" />
+              <item name="linked_list" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552260441722" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552260689035" />
     <property name="extract.method.default.visibility" value="private" />
   </component>
   <component name="RunDashboard">
@@ -190,17 +220,24 @@
       <workItem from="1551793146123" duration="5326000" />
       <workItem from="1551965493642" duration="58000" />
       <workItem from="1552043772339" duration="7138000" />
-      <workItem from="1552256677020" duration="3857000" />
+      <workItem from="1552256677020" duration="4018000" />
+      <workItem from="1552384339865" duration="7000" />
+      <workItem from="1552648894523" duration="54000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="FriendListTest_sort - 2019.03.11 at 00h 27m 25s.xml">
+      <configuration name="FriendListTest.sort" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10507000" />
+    <option name="totallyTimeSpent" value="10729000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="0" width="1370" height="742" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26439393" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27348486" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -296,13 +333,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assignment2/src/friend_app/linked_list/LinkedList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="180" column="50" lean-forward="true" selection-start-line="180" selection-start-column="50" selection-end-line="180" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assignment2/src/friend_app/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
@@ -342,6 +372,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
           <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assignment2/src/friend_app/linked_list/LinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="180" column="50" selection-start-line="180" selection-start-column="50" selection-end-line="180" selection-end-column="50" />
         </state>
       </provider>
     </entry>
