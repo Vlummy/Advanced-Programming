@@ -2,18 +2,19 @@ package main.java.client;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import main.java.client.FXMLFactory.FXMLFactory;
 
 public class App extends Application {
+    private Stage primarystage;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        BorderPane mainLayout = new BorderPane();
-        Scene scene = new Scene(mainLayout);
-        primaryStage.setScene(scene);
-        primaryStage.setTitle("UIB Cources");
+        this.primarystage = primaryStage;
+        primaryStage.setScene(new Scene(FXMLFactory.loadFXML(FXMLFactory.FXMLDocumentName.LandingScreenView)));
+        primaryStage.setTitle("Student Register System");
         primaryStage.show();
+
     }
 
     public static void main(String[] args) {
