@@ -14,9 +14,12 @@ public class App extends Application {
         primaryStage.setScene(scene);
         primaryStage.setTitle("UIB Cources");
         primaryStage.show();
+
+
+
     }
 
-    public static void main(String[] args) {
+    public static void main (String[] args) {
         launch(args);
     }
 }
