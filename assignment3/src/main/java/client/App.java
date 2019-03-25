@@ -14,10 +14,9 @@ public class App extends Application {
         primaryStage.setScene(new Scene(FXMLFactory.loadFXML(FXMLFactory.FXMLDocumentName.LandingScreenView)));
         primaryStage.setTitle("Student Register System");
         primaryStage.show();
-
     }
 
-    public static void main(String[] args) {
+    public static void main (String[] args) {
         launch(args);
     }
 }
