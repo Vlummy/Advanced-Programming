@@ -5,10 +5,10 @@ import java.util.List;
 public interface KullDAOInterface {
     /**
      * Finds an entry in the database table and returns it as an object.
-     * @param id The ID for that particular kull in the database.
+     * @param kode The ID for that particular kull in the database.
      * @return Kull An object representation of the particular database entry.
      */
-    public Kull findKull(Long id);
+    public Kull findKull(String kode);
 
     /**
      * Finds all entries in the database table and returns them as a list of object.
@@ -18,32 +18,32 @@ public interface KullDAOInterface {
 
     /**
      *  Updates an entry in the database table.
-     * @param id the ID of the entry that needs updating.
+     * @param kull the entry that needs updating.
      * @param kode the new value for the entry.
      *
      */
-    public void updateKull (Long id, String kode);
+    public void updateKull (Kull kull, String kode, String skole);
 
     /**
      * Adds a new entry to the database.
-     * @param id The ID of the item to be stored in the database.
+     * @param kull The item to be stored in the database.
      *
      */
-    public void storeKull (Long id);
+    public void storeKull (Kull kull);
 
     /**
      * Adds a list of entries to the database.
-     * @param id the id of the list to add to the database.
+     * @param kullList the list to add to the database.
      *
      */
-    public void storeAllKull (Long id);
+    public void storeAllKull (List<Kull> kullList);
 
     /**
      * Removes an entry from the database.
-     * @param id The ID of the entry to be removed from the database.
+     * @param kull The entry to be removed from the database.
      *
      */
-    public void deleteKull (Long id);
+    public void deleteKull (Kull kull);
 
     /**
      * Closes the connection to the database.

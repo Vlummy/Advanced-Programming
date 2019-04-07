@@ -1,30 +1,40 @@
 package main.java.server.student_register_system;
 
 public class Karakter {
-    private Integer id;
-    private String karakter;
+    private String verdi;
+    private Integer studentID;
+    private String courseID;
     private Integer ar;
 
-    public Karakter(Integer id, String karakter, Integer ar) {
-        this.setId(id);
-        this.setKarakter(karakter);
+    public Karakter(String verdi, Integer studentID, String courseID, Integer ar) {
+        this.setVerdi(verdi);
+        this.setStudentID(studentID);
+        this.setCourseID(courseID);
         this.setAr(ar);
     }
 
-    public Integer getId() {
-        return id;
+    public String getVerdi() {
+        return verdi;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setVerdi(String verdi) {
+        this.verdi = verdi;
     }
 
-    public String getKarakter() {
-        return karakter;
+    public Integer getStudentID() {
+        return studentID;
     }
 
-    public void setKarakter(String karakter) {
-        this.karakter = karakter;
+    public void setStudentID(Integer studentID) {
+        this.studentID = studentID;
+    }
+
+    public String getCourseID() {
+        return courseID;
+    }
+
+    public void setCourseID(String courseID) {
+        this.courseID = courseID;
     }
 
     public Integer getAr() {

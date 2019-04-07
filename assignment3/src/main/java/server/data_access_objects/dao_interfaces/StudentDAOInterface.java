@@ -7,10 +7,10 @@ import java.util.List;
 public interface StudentDAOInterface {
     /**
      * Finds an entry in the database table and returns it as an object.
-     * @param id The ID for that particular student in the database.
+     * @param studentNo The ID for that particular student in the database.
      * @return Student An object representation of the particular database entry.
      */
-    public Student findStudent(Long id);
+    public Student findStudent(Integer studentNo);
 
     /**
      * Finds all entries in the database table and returns them as a list of object.
@@ -20,33 +20,33 @@ public interface StudentDAOInterface {
 
     /**
      *  Updates an entry in the database table.
-     * @param id the ID of the entry that needs updating.
-     * @param number the new value for the number entry
+     * @param student the entry that needs updating.
      * @param navn the new value for the name entry
+     * @param kull the new value for the kull entry
      *
      */
-    public void updateStudent (Long id, Integer number, String navn);
+    public void updateStudent (Student student, String navn, String kull);
 
     /**
      * Adds a new entry to the database.
-     * @param id The ID of the item to be stored in the database.
+     * @param student The item to be stored in the database.
      *
      */
-    public void storeStudent (Long id);
+    public void storeStudent (Student student);
 
     /**
      * Adds a list of entries to the database.
-     * @param id the id of the list to add to the database.
+     * @param studentList the list to add to the database.
      *
      */
-    public void storeAllStudent (Long id);
+    public void storeAllStudent (List<Student> studentList);
 
     /**
      * Removes an entry from the database.
-     * @param id The ID of the entry to be removed from the database.
+     * @param student The entry to be removed from the database.
      *
      */
-    public void deleteStudent (Long id);
+    public void deleteStudent (Student student);
 
     /**
      * Closes the connection to the database.

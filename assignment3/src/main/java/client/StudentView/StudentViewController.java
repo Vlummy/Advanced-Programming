@@ -60,7 +60,7 @@ public class StudentViewController {
     }
 
     public void loadStudentData(Student student) {
-        // Bruk student.getNr() for å hente relevant data, men for nå. Dummy data
+        // Bruk student.getStudentNo() for å hente relevant data, men for nå. Dummy data
         this.student = student;
         studentNameLabel.setText(student.getNavn());
         startYearLabel.setText("2017");

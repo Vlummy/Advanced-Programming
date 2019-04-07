@@ -1,20 +1,21 @@
 package main.java.server.student_register_system;
 
 public class Student {
-    private String nr;
+    private Integer studentNo;
     private String navn;
+    private String kullKode;
 
-    public Student(String nr, String navn) {
-        this.setNr(nr);
+    public Student(String navn, String kullKode) {
         this.setNavn(navn);
+        this.setKullKode(kullKode);
     }
 
-    public String getNr() {
-        return nr;
+    public Integer getStudentNo() {
+        return studentNo;
     }
 
-    public void setNr(String nr) {
-        this.nr = nr;
+    public void setStudentNo(Integer studentNo) {
+        this.studentNo = studentNo;
     }
 
     public String getNavn() {
@@ -23,5 +24,13 @@ public class Student {
 
     public void setNavn(String navn) {
         this.navn = navn;
+    }
+
+    public String getKullKode() {
+        return kullKode;
+    }
+
+    public void setKullKode(String kullKode) {
+        this.kullKode = kullKode;
     }
 }

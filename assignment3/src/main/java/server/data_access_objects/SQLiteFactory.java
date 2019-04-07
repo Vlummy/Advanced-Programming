@@ -13,6 +13,7 @@ public class SQLiteFactory implements DAOFactory {
     private StudentDAOInterface studentDAO;
 
     public SQLiteFactory(String databaseName) {
+
         this.databaseName = databaseName;
     }
 

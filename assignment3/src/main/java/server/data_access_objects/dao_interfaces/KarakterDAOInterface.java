@@ -1,15 +1,20 @@
 package main.java.server.data_access_objects.dao_interfaces;
 
 import main.java.server.student_register_system.Karakter;
+import main.java.server.student_register_system.Kurs;
+import main.java.server.student_register_system.Student;
+
 import java.util.List;
 
 public interface KarakterDAOInterface {
     /**
      * Finds an entry in the database table and returns it as an object.
-     * @param id The ID for that particular karakter in the database.
+     * @param student The student connected to a karakter in the database.
+     * @param course The course connected to a karakter in the database.
+     * @param ar The year value for a karakter in the database.
      * @return Karakter An object representation of the particular database entry.
      */
-    public Karakter findKarakter(Long id);
+    public Karakter findKarakter(Student student, Kurs course, Integer ar);
 
     /**
      * Finds all entries in the database table and returns them as a list of object.
@@ -19,33 +24,35 @@ public interface KarakterDAOInterface {
 
     /**
      *  Updates an entry in the database table.
-     * @param id the ID of the entry that needs updating.
-     * @param karakter the new value for the grade entry.
+     * @param karakter the entry that needs updating.
+     * @param verdi the new value for the grade entry.
+     * @param student the new value for the grade entry.
+     * @param course the new value for the grade entry.
      * @param ar the new value for the year entry
      *
      */
-    public void updateKarakter (Long id, String karakter, Integer ar);
+    public void updateKarakter (Karakter karakter, String verdi, Student student, Kurs course, Integer ar);
 
     /**
      * Adds a new entry to the database.
-     * @param id The ID of the item to be stored in the database.
+     * @param karakter The item to be stored in the database.
      *
      */
-    public void storeKarakter (Long id);
+    public void storeKarakter (Karakter karakter);
 
     /**
      * Adds a list of entries to the database.
-     * @param id the id of the list to add to the database.
+     * @param karakterList the list to add to the database.
      *
      */
-    public void storeAllKarakter (Long id);
+    public void storeAllKarakter (List<Karakter> karakterList);
 
     /**
      * Removes an entry from the database.
-     * @param id The ID of the entry to be removed from the database.
+     * @param karakter The entry to be removed from the database.
      *
      */
-    public void deleteKarakter (Long id);
+    public void deleteKarakter (Karakter karakter);
 
     /**
      * Closes the connection to the database.

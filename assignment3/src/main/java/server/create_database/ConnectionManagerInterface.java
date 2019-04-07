@@ -7,7 +7,7 @@ import java.sql.Connection;
  * Author: Øyvind Johannessen, Roy H. Jensen
  * Version: 1.0
  */
-public interface CreateDatabaseInterface {
+public interface ConnectionManagerInterface {
     /**
      * Creates a new databases. If databaseName already exists, a connection will be made
      * @param databaseName The name of the databases file
@@ -15,11 +15,11 @@ public interface CreateDatabaseInterface {
     Connection connect(String databaseName);
 
     /**
-     * Creates a new table in a database.
+     * Executes a statement in a database.
      * Use the connection returned from connect() method as parameter to specify which database to use
-     * @param SQLStatement The sql code for creating a table with attributes
+     * @param SQLStatement The sql code for the statement.
      */
-    void createTable(String SQLStatement);
+    void executeStatement(String SQLStatement);
 
     /**
      * Closes the connection to the database

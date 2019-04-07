@@ -6,14 +6,18 @@ package main.java.server.student_register_system;
  * Version 1.0
  */
 public class Skole {
-    private String navn;
+    private String name;
+
+    public Skole(String name){
+        this.name = name;
+    }
 
     /**
      * Get school name
      * @return
      */
     public String getName() {
-        return navn;
+        return name;
     }
 
     /**
@@ -21,6 +25,6 @@ public class Skole {
      * @param navn
      */
     public void setName(String navn) {
-        this.navn = navn;
+        this.name = name;
     }
 }

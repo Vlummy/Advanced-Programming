@@ -7,10 +7,10 @@ import java.util.List;
 public interface SkoleDAOInterface {
     /**
      * Finds an entry in the database table and returns it as an object.
-     * @param id The ID for that particular kurs in the database.
+     * @param name The ID for that particular kurs in the database.
      * @return Skole An object representation of the particular database entry.
      */
-    public Skole findSkole(Long id);
+    public Skole findSkole(String name);
 
     /**
      * Finds all entries in the database table and returns them as a list of object.
@@ -20,32 +20,32 @@ public interface SkoleDAOInterface {
 
     /**
      *  Updates an entry in the database table.
-     * @param id the ID of the entry that needs updating.
+     * @param skole the entry that needs updating.
      * @param navn the new value for the year entry
      *
      */
-    public void updateSkole (Long id, String navn);
+    public void updateSkole (Skole skole, String navn);
 
     /**
      * Adds a new entry to the database.
-     * @param id The ID of the item to be stored in the database.
+     * @param skole The item to be stored in the database.
      *
      */
-    public void storeSkole (Long id);
+    public void storeSkole (Skole skole);
 
     /**
      * Adds a list of entries to the database.
-     * @param id the id of the list to add to the database.
+     * @param skoleList the list to add to the database.
      *
      */
-    public void storeAllSkole (Long id);
+    public void storeAllSkole (List<Skole> skoleList);
 
     /**
      * Removes an entry from the database.
-     * @param id The ID of the entry to be removed from the database.
+     * @param skole The entry to be removed from the database.
      *
      */
-    public void deleteSkole (Long id);
+    public void deleteSkole (Skole skole);
 
     /**
      * Closes the connection to the database.
