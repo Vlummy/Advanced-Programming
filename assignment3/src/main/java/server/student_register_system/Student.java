@@ -5,7 +5,8 @@ public class Student {
     private String navn;
     private String kullKode;
 
-    public Student(String navn, String kullKode) {
+    public Student(Integer studentNo, String navn, String kullKode) {
+        this.setStudentNo(studentNo);
         this.setNavn(navn);
         this.setKullKode(kullKode);
     }

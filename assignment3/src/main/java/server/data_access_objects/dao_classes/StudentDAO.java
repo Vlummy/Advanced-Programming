@@ -25,7 +25,7 @@ public class StudentDAO implements StudentDAOInterface {
 
             ResultSet result = prepared.executeQuery();
 
-            Student resultStudent = new Student(result.getString("navn"), result.getString("kull"));
+            Student resultStudent = new Student(result.getInt("studentNo"), result.getString("navn"), result.getString("kull"));
             return resultStudent;
 
         } catch (SQLException e){
@@ -42,7 +42,7 @@ public class StudentDAO implements StudentDAOInterface {
              ResultSet result = statement.executeQuery(sql)){
 
             while (result.next()){
-                Student resultStudent = new Student(result.getString("navn"), result.getString("kull"));
+                Student resultStudent = new Student(result.getInt("studentNo"), result.getString("navn"), result.getString("kull"));
                 resultList.add(resultStudent);
             }
             return resultList;
@@ -53,13 +53,14 @@ public class StudentDAO implements StudentDAOInterface {
         }
     }
 
-    public void updateStudent(Student student, String navn, String kull){
-        String sql = "UPDATE Student SET navn = ?, kull = ? FROM Student WHERE studentNo = ?";
+    public void updateStudent(Student student, Integer studentNo, String navn, String kull){
+        String sql = "UPDATE Student SET studentNo = ?, navn = ?, kull = ? FROM Student WHERE studentNo = ?";
 
         try (PreparedStatement prepared = connection.prepareStatement(sql)){
-            prepared.setString(1, navn);
-            prepared.setString(2, kull);
-            prepared.setInt(3, student.getStudentNo());
+            prepared.setInt(1, studentNo);
+            prepared.setString(2, navn);
+            prepared.setString(3, kull);
+            prepared.setInt(4, student.getStudentNo());
             prepared.executeUpdate();
 
         } catch (SQLException e){
@@ -68,11 +69,12 @@ public class StudentDAO implements StudentDAOInterface {
     }
 
     public void storeStudent (Student student){
-        String sql = "INSERT INTO Student(navn, kull) VALUES(?,?)";
+        String sql = "INSERT INTO Student(studentNo, navn, kull) VALUES(?,?,?)";
 
         try (PreparedStatement prepared = connection.prepareStatement(sql)){
-            prepared.setString(1, student.getNavn());
-            prepared.setString(2, student.getKullKode());
+            prepared.setInt(1, student.getStudentNo());
+            prepared.setString(2, student.getNavn());
+            prepared.setString(3, student.getKullKode());
             prepared.executeUpdate();
 
         } catch (SQLException e){

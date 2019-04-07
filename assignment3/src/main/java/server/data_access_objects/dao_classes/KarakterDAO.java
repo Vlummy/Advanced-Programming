@@ -68,9 +68,9 @@ public class KarakterDAO implements KarakterDAOInterface {
 
         try (PreparedStatement prepared = connection.prepareStatement(sql)){
             prepared.setString(1, verdi);
-            prepared.setInt(2, studentNo);
-            prepared.setString(3, courseNo);
-            prepared.setInt(4, ar);
+            prepared.setInt(2, ar);
+            prepared.setInt(3, studentNo);
+            prepared.setString(4, courseNo);
             prepared.setInt(5, karakter.getStudentID());
             prepared.setString(6, karakter.getCourseID());
             prepared.setInt(7, karakter.getAr());
@@ -86,9 +86,9 @@ public class KarakterDAO implements KarakterDAOInterface {
 
         try (PreparedStatement prepared = connection.prepareStatement(sql)){
             prepared.setString(1, karakter.getVerdi());
-            prepared.setInt(2, karakter.getStudentID());
-            prepared.setString(3, karakter.getCourseID());
-            prepared.setInt(4, karakter.getAr());
+            prepared.setInt(2, karakter.getAr());
+            prepared.setInt(3, karakter.getStudentID());
+            prepared.setString(4, karakter.getCourseID());
             prepared.executeUpdate();
 
         } catch (SQLException e){

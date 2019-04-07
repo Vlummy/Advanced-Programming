@@ -17,9 +17,15 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import main.java.client.FXMLFactory.FXMLFactory;
 import main.java.client.StudentView.StudentViewController;
+import main.java.server.data_access_objects.DAOFactory;
+import main.java.server.data_access_objects.SQLiteFactory;
+import main.java.server.data_access_objects.dao_interfaces.KullDAOInterface;
+import main.java.server.data_access_objects.dao_interfaces.StudentDAOInterface;
+import main.java.server.student_register_system.Kull;
 import main.java.server.student_register_system.Student;
 
 import java.io.IOException;
+import java.util.List;
 
 public class StudentListViewController {
     @FXML
@@ -34,9 +40,32 @@ public class StudentListViewController {
     @FXML
     private TableColumn<Student, String> studentNumberColumn;
 
+    @FXML
+    private ImageView arrowLeft;
+
+    @FXML
+    private ImageView arrowRight;
+
+    @FXML
+    private Label kullLabel;
+
+    @FXML
+    private Label schoolNameLabel;
+
+    //Database connection
+    DAOFactory factory = new SQLiteFactory("student_register_database.db");
+    StudentDAOInterface studentDAO = factory.getStudentDAO();
+    KullDAOInterface kullDAO = factory.getKullDAO();
+
+    //Grabbing the available courses.
+    List<Kull> kullList = kullDAO.findAllKull();
+    Integer currentKullIndex = 0;
+    Integer endKullIndex = kullList.size() -1;
+    Kull currentKull = kullList.get(0);
+
     public void initialize() {
         // Fill studentListView with students
-        fillStudentListview();
+        fillStudentListview(currentKull);
 
         backButton.setOnMouseClicked(event -> {
             Stage stage = getPrimaryStage((Node) event.getSource());
@@ -47,18 +76,31 @@ public class StudentListViewController {
             getSingleStudentData(event);
         });
 
+
+        arrowRight.setOnMouseClicked(event -> {
+            getNextKull();
+        });
+
+        arrowLeft.setOnMouseClicked(event -> {
+            getPreviousKull();
+        });
+        schoolNameLabel.setText("University of Bergen");
+
     }
 
-    private void fillStudentListview() {
+    private void fillStudentListview(Kull kull) {
         studentColumn.setCellValueFactory(new PropertyValueFactory<>("navn"));
-        studentNumberColumn.setCellValueFactory(new PropertyValueFactory<>("nr"));
-        studentTableView.setItems(getAllStudents());
+        studentNumberColumn.setCellValueFactory(new PropertyValueFactory<>("studentNo"));
+
+        studentTableView.setItems(getAllStudents(kull));
+        kullLabel.setText(kull.getKode());
     }
 
-    private ObservableList<Student> getAllStudents() {
-        ObservableList dummyData = FXCollections.observableArrayList();
-        dummyData.addAll(new Student("0407", "Øyvind"), new Student("7365", "Roy H. Jensen"));
-        return dummyData;
+    private ObservableList<Student> getAllStudents(Kull kull) {
+        List<Student> studentList = studentDAO.findAllStudent();
+        studentList.removeIf(s -> !s.getKullKode().equals(kull.getKode()));
+        return FXCollections.observableArrayList(studentList);
+
     }
 
     private void getSingleStudentData(MouseEvent event) {
@@ -78,6 +120,22 @@ public class StudentListViewController {
             // Hent komtroller til denne Scene så vi kan laste inn korrekt data i denne scene
             StudentViewController studentViewController = fxmlLoader.getController();
             studentViewController.loadStudentData(student);
+        }
+    }
+
+    private void getNextKull() {
+        if (currentKullIndex < endKullIndex){
+            currentKullIndex++;
+            currentKull = kullList.get(currentKullIndex);
+            fillStudentListview(currentKull);
+        }
+    }
+
+    private void getPreviousKull() {
+        if (currentKullIndex > 0){
+            currentKullIndex--;
+            currentKull = kullList.get(currentKullIndex);
+            fillStudentListview(currentKull);
         }
     }
 

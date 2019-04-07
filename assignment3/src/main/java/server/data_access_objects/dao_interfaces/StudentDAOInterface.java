@@ -25,7 +25,7 @@ public interface StudentDAOInterface {
      * @param kull the new value for the kull entry
      *
      */
-    public void updateStudent (Student student, String navn, String kull);
+    public void updateStudent (Student student, Integer studentNo, String navn, String kull);
 
     /**
      * Adds a new entry to the database.

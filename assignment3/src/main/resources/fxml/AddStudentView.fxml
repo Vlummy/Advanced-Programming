@@ -20,6 +20,7 @@
          <children>
             <TextField fx:id="nameField" promptText="Name" />
             <TextField fx:id="studentNumberField" promptText="Student Number" />
+            <TextField fx:id="kullField" promptText="Kull" />
             <Pane prefHeight="200.0" prefWidth="200.0">
                <children>
                   <ImageView fx:id="addStudentButton" fitHeight="71.0" fitWidth="89.0" layoutX="55.0" layoutY="54.0" preserveRatio="true">

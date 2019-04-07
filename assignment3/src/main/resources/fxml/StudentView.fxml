@@ -42,26 +42,6 @@
          </center>
       </BorderPane>
    </center>
-   <left>
-      <ImageView fx:id="arrowLeft" fitHeight="150.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" rotate="180.0" BorderPane.alignment="CENTER">
-         <image>
-            <Image url="@../icons/arrowRight-24.png" />
-         </image>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </ImageView>
-   </left>
-   <right>
-      <ImageView fx:id="arrowRight" fitHeight="150.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
-         <image>
-            <Image url="@../icons/arrowRight-24.png" />
-         </image>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </ImageView>
-   </right>
    <bottom>
       <TilePane alignment="CENTER" prefColumns="3" prefHeight="39.0" prefRows="3" prefWidth="580.0" BorderPane.alignment="CENTER">
          <children>
